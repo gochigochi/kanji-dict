@@ -1,0 +1,33 @@
+@use "./variables";
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin centered {
+    display: grid;
+    place-items: center;
+}
+
+@mixin px($n) {
+    padding-left: $n;
+    padding-right: $n;
+}
+
+@mixin py($n) {
+    padding-top: $n;
+    padding-bottom: $n;
+}
+
+@mixin flex-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+@mixin inner {
+    width: 100%;
+    max-width: variables.$max-width;
+    margin: 0 auto;
+}

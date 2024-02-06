@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.grid-card {
+    @include centered;
+    background-color: $secondary-color;
+    height: 10rem;
+    border-radius: $rounded-sm;
+    font-size: 4rem;
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+main {
+    @include px(2rem);
+    @include inner;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.viewer {
+    @include size(100%, 20rem);
+    @include centered;
+    box-shadow: $shadow-md;
+    border-radius: $rounded-md;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}

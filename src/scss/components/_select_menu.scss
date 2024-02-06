@@ -1,0 +1,47 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.select-container {
+    width: 100%;
+    position: relative;
+    max-width: 10rem;
+}
+
+.select-btn {
+    @include py(.5rem);
+    padding-left: 2rem;
+    padding-right: 4rem;
+    border-radius: $rounded-sm;
+    border: 2px solid $secondary-color;
+    position: relative;
+
+    &::after {
+        content: "x";
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: grid;
+        place-items: center;
+    }
+}
+
+.select-menu {
+    position: absolute;
+    width: 100%;
+    margin-top: .5rem;
+    border-radius: $rounded-sm;
+    border: 2px solid $secondary-color;
+    background-color: #fff;
+    box-shadow: $shadow-sm;
+}
+
+.select-menu-item {
+    @include px(2rem);
+    @include py(.7rem);
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}

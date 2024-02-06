@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.modal-container {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    @include px(2rem);
+    @include py(2rem);
+    width: 100%;
+    max-width: 30rem;
+    background-color: #fff;
+    border-radius: $rounded-md;
+    box-shadow: $shadow-md;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0px, 1fr));
+    column-gap: .3rem;
+
+    h2 {
+        font-size: 8rem;
+        font-weight: 400;
+    }
+}
+
+.modal-top {
+    grid-column: span 4;
+}
+
+.modal-bottom {
+    grid-column: span 8;
+}
+
+.small-title {
+    font-size: .8rem;
+    color: $soft-gray;
+}

@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.card {
+    @include py(3rem);
+    @include px(5rem);
+    @include size(100%, 15rem);
+    max-width: 30rem;
+    border-radius: $rounded-lg;
+    border: 1px solid rgb(194, 87, 87);
+}
